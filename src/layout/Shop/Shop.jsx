@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { API_URL, API_KEY } from '../../config';
+
 import { Loader } from '../Loader/Loader';
 import { GoodsList } from '../../components/GoodsList';
 
@@ -13,7 +14,7 @@ export const Shop = () => {
     fetch(API_URL, {
       headers: {
         Authorization: API_KEY,
-      },
+      }
     })
       .then((response) => response.json())
       .then((data) => {
@@ -21,6 +22,7 @@ export const Shop = () => {
         setLoading(false);
       });
   }, []);
+  
   return (
     <main className='container content'>
       {loading ? <Loader /> : <GoodsList goods={goods}/>}

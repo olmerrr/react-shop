@@ -1,13 +1,19 @@
 .nav {
   background-color: #009fc9;
 }
+ 
 nav .brand-logo {
-  font-weight: 700;
-  left: 15%;
+  left: 32%;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 500px) {
   nav .brand-logo {
-    left: 10%;
+    left: 22%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  nav .brand-logo {
+    left: 15%;
   }
 }
