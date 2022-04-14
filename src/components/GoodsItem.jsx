@@ -1,7 +1,7 @@
 import './GoodsItem';
 
 export const GoodsItem = (props) => {
-  const { id, name, description, price, full_background, addToBasket = Function.prototype} = props;
+  const { id, name, description, price, full_background, addToBasket = Function.prototype } = props;
   return (
     <div>
       <div className='card'>
