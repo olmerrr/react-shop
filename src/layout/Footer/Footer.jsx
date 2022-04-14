@@ -61,6 +61,8 @@ export function Footer() {
         </span>
         <a
           className='grey-text text-lighten-4 right repo-link'
+          target='_blank'
+          rel="noreferrer" 
           href='https://github.com/olmerrr?tab=repositories'
         >
           Repository
