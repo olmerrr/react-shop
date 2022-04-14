@@ -14,6 +14,10 @@ export const Shop = () => {
   const [order, setOrder] = useState([]);
   const [isBasketShow, setBasketShow] = useState(false);
 
+  const handleBasketShow = () => {
+    setBasketShow(!isBasketShow);  
+  };
+
   const addToBasket = (item) => {
     //если id совпадут я получу этот id чере findIndex
     const itemIndex = order.findIndex((orderItem) => orderItem.id === item.id);
@@ -46,10 +50,36 @@ export const Shop = () => {
     setOrder(newOrder);
   }
 
-  const handleBasketShow = () => {
-    setBasketShow(!isBasketShow);
-  
-  };
+
+  const incQuantity = (itemId) => {
+    const newOrder = order.map(el => {
+      if (el.id === itemId) {
+        const newQuantity = el.quantity + 1;
+        return {
+          ...el,
+          quantity: newQuantity
+        }
+      } else {
+        return el
+      }
+    });
+    setOrder(newOrder);
+  }
+ 
+  const decQuantity = (itemId) => {
+    const newOrder = order.map(el => {
+      if (el.id === itemId) {
+        const newQuantity = el.quantity - 1;
+        return {
+          ...el,
+          quantity: newQuantity >= 1 ? newQuantity : 1 
+        }
+      } else {
+        return el
+      }
+    });
+    setOrder(newOrder);
+  }
 
   useEffect(function getGoads() {
     fetch(API_URL, {
@@ -82,6 +112,8 @@ export const Shop = () => {
             order={order}
             handleBasketShow={handleBasketShow}
             removeFromBasket={removeFromBasket}
+            incQuantity={incQuantity}
+            decQuantity={decQuantity}
           />
       }
     </main>
