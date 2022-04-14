@@ -26,7 +26,8 @@
   -webkit-box-shadow: 11px 10px 29px -7px rgba(0,0,0,0.75);
   -moz-box-shadow: 11px 10px 29px -7px rgba(0,0,0,0.75);
   box-shadow: 11px 10px 29px -7px rgba(0,0,0,0.75);
-  border-radius: 2px;  
+  border-radius: 2px;
+  animation: show 500ms ease-in-out;  
 }
 
 .basket-list .title{
@@ -40,4 +41,21 @@
 
 .close-icon:hover {
   color: #333;  
+}
+
+@keyframes show {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  
+  50%{
+    top: 30%;
+    opacity: 0.3;
+  }
+
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
 }
