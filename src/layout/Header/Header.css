@@ -1,19 +1,21 @@
-.nav {
-  background-color: #009fc9;
+.header {
+  padding: 10px 20px;
+  background-color: #131a22;
+
 }
- 
-nav .brand-logo {
-  left: 32%;
+.header-nav {
+  background-color: #131a22;
 }
 
-@media screen and (min-width: 500px) {
-  nav .brand-logo {
-    left: 22%;
-  }
+.nav-links li {
+  border-bottom: 1px solid transparent;
 }
 
-@media screen and (min-width: 1000px) {
-  nav .brand-logo {
-    left: 15%;
-  }
+.nav-links li:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.nav-links a {
+  font-size: 1.3rem;
+  font-weight: 300;
 }

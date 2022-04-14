@@ -5,7 +5,7 @@ import { Loader } from '../Loader/Loader';
 import { Cart } from '../Cart/Cart';
 import { BasketList } from '../BasketList/BasketList';
 import { GoodsList } from '../../components/GoodsList';
-
+import {Alert} from '../Alert/Alert'
 import './Shop.css';
 
 export const Shop = () => {
@@ -13,6 +13,7 @@ export const Shop = () => {
   const [goods, setGoods] = useState([]);
   const [order, setOrder] = useState([]);
   const [isBasketShow, setBasketShow] = useState(false);
+  const [alertName, setAlertName] = useState('');
 
   const handleBasketShow = () => {
     setBasketShow(!isBasketShow);  
@@ -43,6 +44,7 @@ export const Shop = () => {
       });
       setOrder(newOrder);
     }
+    setAlertName(item.name);
   };
 
   const removeFromBasket = (itemId) => {
@@ -81,6 +83,10 @@ export const Shop = () => {
     setOrder(newOrder);
   }
 
+  const closeAlert = () => {
+    setAlertName('')
+  }
+
   useEffect(function getGoads() {
     fetch(API_URL, {
       headers: {
@@ -106,6 +112,7 @@ export const Shop = () => {
       ) : (
         <GoodsList goods={goods} addToBasket={addToBasket} />
       )}
+      
       {
         isBasketShow && 
           <BasketList 
@@ -116,6 +123,12 @@ export const Shop = () => {
             decQuantity={decQuantity}
           />
       }
+
+      {alertName && 
+      <Alert 
+        name={alertName} 
+        closeAlert={closeAlert}
+      />}
     </main>
   );
 };

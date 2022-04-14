@@ -1,25 +1,24 @@
-import "./Header.css";
+import './Header.css';
 
 export function Header() {
   return (
-    <header>
-      <nav className="nav">
-        <div className="nav-wrapper">
-          <a href="/" className="brand-logo">
-            Game Shop
-          </a>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li>
-              <a href="https://sass-lang.com">Sass</a>
-            </li>
-            <li>
-              <a href="https://uk.reactjs.org">React</a>
-            </li>
-            <li>
-              <a href="https://developer.mozilla.org/">JavaScript</a>
-            </li>
-          </ul>
-        </div>
+    <header className='header'>
+      <nav className='header-nav'>
+        <a href='/' className='brand-logo'>
+          Game Shop
+        </a>
+
+        <ul id='nav-mobile' className='right hide-on-med-and-down nav-links'>
+          <li>
+            <a href='https://en.wikipedia.org/wiki/Gift'>Gifts</a>
+          </li>
+          <li>
+            <a href='https://en.wikipedia.org/wiki/Store'>Store</a>
+          </li>
+          <li>
+            <a href='https://en.wikipedia.org/wiki/Metaverse'>Metaverse</a>
+          </li>
+        </ul>
       </nav>
     </header>
   );
