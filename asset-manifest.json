@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/olmerrr.github.io/react-shop/static/css/main.0365d154.css",
-    "main.js": "/olmerrr.github.io/react-shop/static/js/main.18b1068a.js",
+    "main.js": "/olmerrr.github.io/react-shop/static/js/main.251c2201.js",
     "index.html": "/olmerrr.github.io/react-shop/index.html",
     "main.0365d154.css.map": "/olmerrr.github.io/react-shop/static/css/main.0365d154.css.map",
-    "main.18b1068a.js.map": "/olmerrr.github.io/react-shop/static/js/main.18b1068a.js.map"
+    "main.251c2201.js.map": "/olmerrr.github.io/react-shop/static/js/main.251c2201.js.map"
   },
   "entrypoints": [
     "static/css/main.0365d154.css",
-    "static/js/main.18b1068a.js"
+    "static/js/main.251c2201.js"
   ]
 }
