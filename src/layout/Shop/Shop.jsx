@@ -3,8 +3,8 @@ import { API_URL, API_KEY } from '../../config';
 
 import { Loader } from '../Loader/Loader';
 import { Cart } from '../Cart/Cart';
-import { BasketList } from '../BasketList/BasketList';
-import { GoodsList } from '../../components/GoodsList';
+import { BasketList } from '../../components/BasketList/BasketList';
+import { GoodsList } from '../../components/GoodsList/GoodsList';
 import {Alert} from '../Alert/Alert'
 import './Shop.css';
 

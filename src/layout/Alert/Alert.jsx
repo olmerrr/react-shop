@@ -3,7 +3,7 @@ import './Alert.css';
 
 export const Alert = ({ name = '', closeAlert = Function.prototype }) => {
   useEffect(() => {
-    const timerId = setTimeout(closeAlert, 21213000);
+    const timerId = setTimeout(closeAlert, 3000);
     return () => {
       clearTimeout(timerId);
     };
