@@ -19,3 +19,8 @@
   font-size: 1.3rem;
   font-weight: 300;
 }
+
+.nav-links a:last-child {
+  padding-right: 0;
+}
+
